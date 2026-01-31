@@ -72,4 +72,53 @@ Week 2 introduces Natural Language Processing (NLP), focusing on how machines pr
 
 ---
 
-This repository will be updated weekly with new topics, implementations, and learnings as the WIDS 2026 program progresses.
+# Week 3 – Bridging Computer Vision + NLP for Image Captioning and Explainability
+
+## Overview
+Week 3 connects Computer Vision and Natural Language Processing through multimodal learning and image captioning. The focus is on encoder–decoder architectures, attention mechanisms, Vision Transformers, and Explainable AI techniques. The practical work emphasizes understanding CNN model behavior using visualization and Grad-CAM.
+
+---
+
+## Topics Covered
+
+- Image captioning as a multimodal (vision + language) task
+- Encoder–decoder architectures for caption generation
+- CNN and Vision Transformer (ViT) as image encoders
+- LSTM and Transformer-based caption decoders
+- Attention mechanisms for word–region alignment
+- Explainable AI (XAI) methods for vision models
+- Grad-CAM and attention heatmap visualization
+
+---
+
+## Practical Implementation (Assignment)
+
+- Loaded pretrained ResNet-18 and fine-tuned final layer
+- Performed image classification on CIFAR-10
+- Visualized convolutional filters (early and deep layers)
+- Extracted and plotted intermediate feature maps
+- Implemented Grad-CAM for prediction explainability
+- Generated heatmaps for correct predictions
+- Analyzed a misclassified example using Grad-CAM
+
+---
+
+## Key Learnings
+
+- Understood how vision and language models are combined
+- Learned encoder–decoder multimodal design
+- Built intuition for Vision Transformers
+- Applied attention for interpretability
+- Used CNN visualization techniques
+- Implemented Grad-CAM for model explanation
+- Evaluated model behavior on success and failure cases
+
+---
+
+## Submissions
+
+- Week 3 notebook with XAI experiments
+- Filter and feature map visualizations
+- Grad-CAM outputs (correct + failure cases)
+- Short interpretability report
+
