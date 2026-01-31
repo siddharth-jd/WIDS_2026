@@ -122,3 +122,62 @@ Week 3 connects Computer Vision and Natural Language Processing through multimod
 - Grad-CAM outputs (correct + failure cases)
 - Short interpretability report
 
+---
+
+# Image Captioning — CNN + Transformer (Final Project)
+
+## Objective
+Build an end-to-end image captioning model that generates a single sentence description for an image using a CNN encoder and a Transformer decoder.
+
+## Dataset
+Flickr8k dataset  
+- ~8k images  
+- 5 captions per image  
+- Downloaded in Colab using Kaggle API
+
+## Model
+**Encoder:** ResNet-18 (pretrained, classifier removed, global pooled features)  
+**Decoder:** Transformer Decoder  
+- 3 layers, 8 heads, d_model=512  
+- Teacher forcing + causal mask
+
+## Preprocessing
+- Images resized to 224×224 with ImageNet normalization  
+- Word-level tokenizer  
+- Special tokens: `<bos> <eos> <pad> <unk>`  
+- Max caption length = 24  
+- Text stats + length histogram computed
+
+## Training
+- Loss: Cross-entropy (PAD ignored)  
+- Optimizer: Adam  
+- LR scheduler used  
+- Fixed random seed  
+- Feature cache saved as `.pt`
+
+## Experiments
+Backbone comparison:
+- ResNet18 vs MobileNet encoder
+
+## Evaluation
+Metrics computed:
+- BLEU-4  
+- METEOR  
+- Caption length stats  
+- Repetition %
+
+## Analysis
+- 10 success examples  
+- 10 failure examples  
+- Mis-caption case studies  
+- Grad-CAM visualizations  
+- Decoder attention analysis
+
+## Limitations
+- Small dataset  
+- Word-level vocab limits  
+- CNN pooling loses detail  
+- Greedy decoding only
+
+## Run
+Open notebook in Google Colab → run cells in order (GPU recommended).
